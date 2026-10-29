@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Ritu ♡</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Nunito:wght@400;600;700;800&family=Sacramento&display=swap');
+  :root{
+    --pink:#f7c9dc; --pink2:#ffe8f1; --lav:#d9d1fa; --lav2:#f0edff;
+    --ink:#5d4969; --deep:#8d5d85; --cream:#fffafc; --white:#fff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;color:var(--ink);font-family:Nunito,system-ui,sans-serif;background:
+    radial-gradient(ellipse at 15% 10%,#fff1f7 0,transparent 34%),
+    radial-gradient(ellipse at 90% 20%,#eee9ff 0,transparent 36%),
+    linear-gradient(180deg,#fffafd,#fff7fb 55%,#f8f4ff);overflow-x:hidden}
+  button{font:inherit;cursor:pointer}
+  .stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .star{position:absolute;color:#fff;opacity:.75;animation:twinkle 3s ease-in-out infinite}
+  @keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+  .heart-float{position:fixed;bottom:-30px;z-index:0;color:#eaa6c9;opacity:.45;pointer-events:none;animation:rise 12s linear infinite}
+  @keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+  .wrap{position:relative;z-index:1}
+  section{padding:78px 20px;max-width:980px;margin:auto}
+  .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:35px 20px}
+  .hero-inner{max-width:720px}
+  .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:#a57da5;font-weight:800}
+  h1,h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05}
+  h1{font-size:clamp(3.3rem,10vw,6.8rem);margin:12px 0;color:#986d9b}
+  h2{font-size:clamp(2.2rem,6vw,3.6rem);margin:0 0 14px;color:#926a9a}
+  .script{font-family:Sacramento,cursive;font-size:clamp(2rem,6vw,3.4rem);color:#c17da8}
+  .lead{font-size:clamp(1rem,2.4vw,1.2rem);line-height:1.8;max-width:590px;margin:20px auto;color:#76627e}
+  .btn{border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(135deg,#edb9d4,#d8cdf8);color:#654c75;font-weight:800;box-shadow:0 10px 28px #d7b9db55;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #d7b9db88}
+  .btn.secondary{background:#fff8fc;border:1px solid #efd5e5;box-shadow:none}
+  .envelope-wrap{margin:30px auto 24px;width:150px;height:112px;position:relative;cursor:pointer;filter:drop-shadow(0 15px 18px #d4a8cb55);transition:transform .3s}
+  .envelope-wrap:hover{transform:translateY(-5px) rotate(-2deg)}
+  .envelope{position:absolute;inset:0;background:#f3c8dd;border-radius:10px}
+  .envelope:before{content:"";position:absolute;inset:0;background:#f8d9e8;clip-path:polygon(0 0,100% 0,50% 62%)}
+  .envelope:after{content:"";position:absolute;inset:0;background:#eab3d0;clip-path:polygon(0 100%,0 42%,50% 78%,100% 42%,100% 100%)}
+  .seal{position:absolute;z-index:2;left:50%;top:52%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#d889b5;color:white;display:grid;place-items:center;font-size:1.1rem}
+  .hint{font-size:.85rem;color:#a184a5}
+  .section-head{text-align:center;margin-bottom:35px}
+  .section-head p{max-width:570px;margin:12px auto;line-height:1.75;color:#816d88}
+  .card{background:#ffffffb8;border:1px solid #f3ddeb;border-radius:26px;padding:24px;box-shadow:0 14px 45px #d6b7dc22;backdrop-filter:blur(8px)}
+  .timeline{position:relative;max-width:680px;margin:auto}
+  .timeline:before{content:"";position:absolute;left:17px;top:8px;bottom:8px;width:2px;background:linear-gradient(#f2bad5,#cfc4f5)}
+  .moment{position:relative;padding:0 0 24px 52px}
+  .dot{position:absolute;left:8px;top:6px;width:20px;height:20px;border-radius:50%;background:#fff;border:5px solid #e8bfdc;box-shadow:0 0 0 4px #fcebf4}
+  .moment h3{margin:0 0 8px;color:#a0719c;font-size:1.05rem}
+  .moment p{margin:0;line-height:1.7;color:#786783}
+  
+  .photo-note{font-size:.8rem;color:#a18ba5;text-align:center}
+  .reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+  .reason{min-height:135px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;transition:transform .2s}
+  .reason:hover{transform:translateY(-4px)}
+  .reason .emoji{font-size:1.8rem}
+  .reason button{border:0;background:none;color:#8d6a94;font-weight:800}
+  .reason-detail{display:none;margin-top:8px;font-size:.9rem;line-height:1.65;color:#786783}
+  .reason.open .reason-detail{display:block}
+  .letter{max-width:720px;margin:auto;line-height:1.95;font-size:1.04rem}
+  .letter p{margin:0 0 18px}
+  .signature{font-family:Sacramento,cursive;font-size:2.5rem;color:#c17da8;text-align:right;margin-top:15px}
+  .promise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .promise{min-height:140px;display:grid;place-items:center;text-align:center;cursor:pointer}
+  .promise .gift{font-size:2.5rem}
+  .promise strong{display:block;margin-top:8px;color:#9c729e}
+  .promise .inside{display:none;font-size:.88rem;line-height:1.65;margin-top:10px}
+  .promise.open .inside{display:block}
+  .promise.open .gift{transform:scale(1.08)}
+  .final{text-align:center}
+  .big-heart{font-size:4.5rem;display:inline-block;animation:beat 1.5s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+  .choices{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+  .response{min-height:60px;margin:24px auto 0;max-width:600px;line-height:1.8;color:#9b7198;font-weight:700}
+  footer{text-align:center;padding:35px 20px 55px;color:#b095b1;font-size:.85rem}
+  .music-toggle{position:fixed;right:16px;top:16px;z-index:5;border:1px solid #f1dce9;background:#fff9fcdd;color:#9a719b;border-radius:50px;padding:10px 14px;font-size:.8rem}
+  .hidden{display:none!important}
+  @media(max-width:600px){section{padding:62px 17px}.card{padding:19px}.hero{min-height:95svh}.music-toggle{top:10px;right:10px}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="wrap">
+  <button class="music-toggle" id="musicBtn" aria-label="Toggle gentle music">♫ Music: off</button>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">a little something, made with love</div>
+      <h1>For Ritu, baby <span style="font-size:.48em">♡</span></h1>
+      <div class="script">the library, Mussoorie, and all the chai still to come</div>
+      <div class="envelope-wrap" id="openLetter" role="button" tabindex="0" aria-label="Open the letter">
+        <div class="envelope"></div><div class="seal">♥</div>
+      </div>
+      <p class="lead" id="intro">I made you a tiny little corner of the internet, baby. No pressure, no expectations—just our memories, a few honest words, and a whole lot of love.</p>
+      <button class="btn" id="startBtn">Open your little universe ♡</button>
+      <div class="hint" style="margin-top:13px">tap the envelope or the button</div>
+    </div>
+  </header>
+
+  <main id="story" class="hidden">
+    <section>
+      <div class="section-head">
+        <div class="eyebrow">chapter one</div><h2>Our little story</h2>
+        <p>Some of my favourite moments are the ones that might look ordinary to everyone else. To me, they're little treasures.</p>
+      </div>
+      <div class="timeline">
+        <article class="moment">
+          <span class="dot"></span><div class="card">
+            <h3>The beginning ✨</h3>
+            <p>The day you entered the library, you entered my heart. I still love how a place meant for quiet pages became the beginning of our story.</p>
+
+            <p class="photo-note"></p>
+          </div>
+        </article>
+        <article class="moment">
+          <span class="dot"></span><div class="card">
+            <h3>A memory I keep replaying ♡</h3>
+            <p>Our first trek together in Mussoorie—and your reaction at the railway station. I keep replaying those moments because they feel so unmistakably ours.</p>
+
+            
+          </div>
+        </article>
+        <article class="moment">
+          <span class="dot"></span><div class="card">
+            <h3>Today, and all the days after 🌙</h3>
+            <p>Being with you feels like home: somewhere I want to return to, sit beside you, and share a simple cup of chai. Even on difficult days, that feeling matters to me.</p>
+
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="eyebrow">chapter two</div><h2>Little things I love about you</h2>
+        <p>Tap a note. There are so many things I adore about you—and these are only a few.</p>
+      </div>
+      <div class="reasons">
+        <div class="reason card"><span class="emoji">🌷</span><button>That lovely heart of yours</button><div class="reason-detail">The way you care, even in ways you don't make a big deal about. It means more than you know.</div></div>
+        <div class="reason card"><span class="emoji">☁️</span><button>Your little expressions</button><div class="reason-detail">I love the tiny expressions that are so unmistakably you. I wish I could save them like photos.</div></div>
+        <div class="reason card"><span class="emoji">🌙</span><button>Your voice</button><div class="reason-detail">Even a normal conversation with you can become the best part of my day.</div></div>
+        <div class="reason card"><span class="emoji">🦋</span><button>Your strength</button><div class="reason-detail">I admire how you keep being yourself, how you care, and how much you keep growing.</div></div>
+        <div class="reason card"><span class="emoji">🍓</span><button>Your adorable side</button><div class="reason-detail">The cute, funny, slightly mischievous  that makes me smile for no reason.</div></div>
+        <div class="reason card"><span class="emoji">💗</span><button>Simply… you</button><div class="reason-detail">Not because you have to be perfect. Because you are you—and I love you for that.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="eyebrow">the important part</div><h2>A letter for you</h2>
+        <p>Less sparkle for a moment. Just me, being honest with you.</p>
+      </div>
+      <div class="card letter">
+        <p>My dearest ,</p>
+        <p>I know you're upset with me, baby, and I am sorry. I don't want to guess at your feelings, minimise what happened, or act as though a cute website can make everything disappear.</p>
+        <p>Even I am not always able to understand my own emotions well. I am trying to make sense of them, and I want to be honest with you about that. I am not saying this to seek sympathy, or to make you responsible for how I feel.</p>
+        <p>I don't want to be controlling. I want you to feel free, respected, and loved—not managed. Yes, I want to be vulnerable with you, to let you see the parts of me I don't always know how to explain. But I am not opening up this way with everyone else; this kind of honesty is something I want to share with you.</p>
+        <p>You don't owe me instant forgiveness. Take the time you need. When you're ready, I want to listen without defensiveness, understand what matters to you, and make things right through what I do—not just what I say.</p>
+        <p>I love you, baby. I am sorry—and I want to do better, with you and for us.</p>
+        <div class="signature">always yours ♡</div>
+      </div>
+    </section>
+
+    <section>
+<div class="music-card card" style="max-width:680px;margin:24px auto 0;text-align:center">
+          <div class="script">A little song for us ♡</div>
+          <p style="line-height:1.7;color:#816d88">Play it whenever you feel like listening.</p>
+          <div style="position:relative;width:100%;padding-top:56.25%;border-radius:18px;overflow:hidden;background:#f3eafa">
+            <iframe src="https://www.youtube-nocookie.com/embed/98zHKN-xSHk?rel=0"
+              title="A little song for us" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+              style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+          </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="eyebrow">little promises</div><h2>Things I want to give you</h2>
+        <p>Tap each little gift. These aren't meant to be grand promises—just reminders of the care I want to put into us.</p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise card"><span class="gift">🎁</span><strong>Listening</strong><div class="inside">My full attention—not just a reply while my mind is somewhere else.</div></div>
+        <div class="promise card"><span class="gift">🎀</span><strong>Patience</strong><div class="inside">Room for your feelings, even when they're difficult for me to hear.</div></div>
+        <div class="promise card"><span class="gift">🌸</span><strong>Effort</strong><div class="inside">Actions that match the things I say, especially when it counts.</div></div>
+        <div class="promise card"><span class="gift">🫶</span><strong>Time</strong><div class="inside">More intentional moments, and more care in the ordinary days.</div></div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="section-head">
+        <div class="eyebrow">one last little thing</div><h2>Can I make it up to you?</h2>
+      </div>
+      <div class="big-heart">💗</div>
+      <p class="lead">I know this page can't fix everything. I just hope it reminds you that you're loved, that I'm sorry, and that I'm here when you're ready.</p>
+      <div class="choices">
+        <button class="btn" id="yesBtn">You can try ♡</button>
+        <button class="btn secondary" id="madBtn">I'm still mad 😤</button>
+      </div>
+      <div class="response" id="response" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer>made with a very full heart, just for  ♡</footer>
+</div>
+
+<script>
+  // Tiny twinkling stars and floating hearts—no libraries needed.
+  const stars = document.getElementById('stars');
+  for(let i=0;i<42;i++){
+    const s=document.createElement('span'); s.className='star'; s.textContent=i%4===0?'✦':'·';
+    s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%';
+    s.style.fontSize=(8+Math.random()*14)+'px'; s.style.animationDelay=(Math.random()*4)+'s';
+    stars.appendChild(s);
+  }
+  for(let i=0;i<8;i++){
+    const h=document.createElement('span');h.className='heart-float';h.textContent=['♡','♥','✧'][i%3];
+    h.style.left=(Math.random()*100)+'%';h.style.animationDelay=(Math.random()*12)+'s';
+    h.style.animationDuration=(10+Math.random()*10)+'s';h.style.fontSize=(14+Math.random()*20)+'px';
+    document.body.appendChild(h);
+  }
+  const story=document.getElementById('story');
+  function openStory(){
+    story.classList.remove('hidden');
+    document.getElementById('intro').textContent='Take your time, my love. This little universe is yours.';
+    document.getElementById('startBtn').textContent='Your little universe is open ♡';
+    document.getElementById('startBtn').disabled=true;
+    story.scrollIntoView({behavior:'smooth'});
+  }
+  document.getElementById('startBtn').addEventListener('click',openStory);
+  document.getElementById('openLetter').addEventListener('click',openStory);
+  document.getElementById('openLetter').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openStory();}});
+  document.querySelectorAll('.reason').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('open')));
+  document.querySelectorAll('.promise').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('open')));
+  document.getElementById('yesBtn').addEventListener('click',()=>{
+    document.getElementById('response').textContent='That means a lot to me, . I’ll listen, I’ll be patient, and I’ll do my best to make it right. Thank you for giving me a chance. ♡';
+    burstHearts();
+  });
+  document.getElementById('madBtn').addEventListener('click',()=>{
+    document.getElementById('response').textContent='That’s okay, my love. You’re allowed to feel what you feel. Take your time—I’m here, and I still love you. ♡';
+  });
+  function burstHearts(){
+    for(let i=0;i<18;i++){
+      const h=document.createElement('span');h.textContent=['♡','♥','✧'][i%3];
+      h.style.position='fixed';h.style.left=(45+Math.random()*10)+'%';h.style.top='58%';
+      h.style.zIndex='10';h.style.pointerEvents='none';h.style.color='#d88ab8';h.style.fontSize=(15+Math.random()*22)+'px';
+      document.body.appendChild(h);
+      const x=(Math.random()-.5)*420,y=-80-Math.random()*260;
+      h.animate([{transform:'translate(0,0)',opacity:1},{transform:`translate(${x}px,${y}px) rotate(${Math.random()*160}deg)`,opacity:0}],{duration:1100+Math.random()*700,easing:'ease-out'}).onfinish=()=>h.remove();
+    }
+  }
+  // Optional ambient tone: generated in-browser, starts only after user taps the music control.
+  let audioCtx=null, oscillator=null, gain=null, musicOn=false;
+  document.getElementById('musicBtn').addEventListener('click',()=>{
+    const btn=document.getElementById('musicBtn');
+    if(!musicOn){
+      try{
+        audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+        gain=audioCtx.createGain();gain.gain.value=0.018;gain.connect(audioCtx.destination);
+        oscillator=audioCtx.createOscillator();oscillator.type='sine';oscillator.frequency.value=261.63;oscillator.connect(gain);oscillator.start();
+        musicOn=true;btn.textContent='♫ Music: on';
+      }catch(e){btn.textContent='Music unavailable';}
+    }else{
+      if(oscillator){oscillator.stop();oscillator=null;}if(audioCtx){audioCtx.close();audioCtx=null;}
+      musicOn=false;btn.textContent='♫ Music: off';
+    }
+  });
+</script>
+</body>
+</html>
